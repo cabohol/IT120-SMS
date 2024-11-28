@@ -11,8 +11,8 @@ class Message(models.Model):
         return self.name
     def save(self, *args, **kwargs):
         if self.score >= 70:
-            account_sid = 'AC8ce7ccad83244fdf629c36e47fe8d29e'
-            auth_token = '2dfe3ebae5f4770600b0b3b99c11ed46'
+            account_sid = 'twilio ssid'
+            auth_token = 'twilio token'
             client = Client(account_sid, auth_token)
 
             message = client.messages.create(
@@ -21,8 +21,8 @@ class Message(models.Model):
                 to='+639282402911'
             )
         else:
-            account_sid = 'AC33b4e34a7e5c7ea0d6c9528b349d9cc8'
-            auth_token = 'be23ba82eb617c3d17a3839ae0829c82'
+            account_sid = 'twilio ssid'
+            auth_token = 'twilio token'
             client = Client(account_sid, auth_token)
 
             message = client.messages.create(
