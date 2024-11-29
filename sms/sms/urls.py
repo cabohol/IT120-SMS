@@ -16,7 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from dashboard.views import send_sms
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', send_sms, name='send_sms'),  # Set the SMS form as the homepage for now
 ]
